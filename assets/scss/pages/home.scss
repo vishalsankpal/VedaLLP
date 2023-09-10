@@ -1,0 +1,629 @@
+/*----Banner section start ----*/
+section.banner {
+  background-color: $primary;
+  padding-top: 6.875rem;
+  @media only screen and (max-width: 768px) {
+    padding: 3.75rem 0;
+  }
+  .container {
+    .banner-row-wrapper {
+      justify-content: center;
+    }
+  }
+  .banner-content-wrapper {
+    display: grid;
+    place-items: center;
+    margin-bottom: 2.5rem;
+    .banner-title {
+      color: $white;
+      font-size: 3rem;
+      font-family: $rufina;
+      font-weight: $regular;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      @media only screen and (max-width: 464px) {
+        font-size: 2.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+        display: block;
+      }
+    }
+    .primary-btn-cta {
+      @include buttons(
+        $primary,
+        $white,
+        1.125rem,
+        $white,
+        $sintony,
+        $bold,
+        0.875rem
+      );
+    }
+  }
+  .card-row {
+    row-gap: 1.5rem;
+    @media only screen and (min-width: 768px) {
+      position: relative;
+      top: 69px;
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
+    & > div {
+      .banner-card-wrapper {
+        @media only screen and (min-width: 992px) {
+          &:hover {
+            transform: scale(1.2) translateY(-18px);
+            box-shadow: 0 5px 39px -6px rgba(0, 0, 0, 0.52);
+            transition: all 0.3s ease;
+          }
+        }
+        .card-img-wrapper {
+          height: 288px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .card-text-warpper {
+          background-color: $white;
+          padding: 1.5rem 0;
+          border: 1px solid $light-border;
+          border-top: 0;
+          .card-title {
+            margin-bottom: 0;
+            font-size: 1.063rem;
+            font-family: $sintony;
+            color: $dark-gray;
+            @include ellipses(1);
+          }
+        }
+      }
+    }
+  }
+}
+/*----Banner section end ------*/
+/*----Cause section start ------*/
+section.cause {
+  background-color: $white;
+  padding-top: 12.5rem;
+  padding-bottom: 5.625rem;
+  @media only screen and (max-width: 768px) {
+    padding: 5.625rem 0;
+  }
+  .section-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.813rem;
+    .section-subtitle {
+      margin-bottom: 0.313rem;
+    }
+  }
+  .row {
+    row-gap: 1.5rem;
+    justify-content: center;
+  }
+  .cause-card-wrapper {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: auto;
+    .cause-card-title {
+      font-family: $rufina;
+      font-size: 1.563rem;
+      color: $dark-gray;
+      font-weight: $regular;
+      margin-bottom: 0.313rem;
+    }
+    .cause-img-progressbar-wrapper {
+      position: relative;
+      margin-bottom: 1.5rem;
+      .cause-img-wrapper {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+    }
+    .achived-target-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      column-gap: 2.813rem;
+      .achived-wrapper {
+        align-items: flex-end;
+        .achived-amount {
+          color: $dark-gray !important;
+        }
+      }
+      .target-wrapper {
+        align-items: flex-start;
+      }
+      .achived-wrapper,
+      .target-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .achived-title {
+          @extend .fz14;
+          font-family: $sintony;
+          font-weight: $regular;
+          color: $section-subtitle;
+          margin-bottom: 0;
+        }
+        .achived-amount {
+          font-family: $sintony;
+          font-weight: $regular;
+          font-size: 1.5rem;
+          color: $secondary;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .cause-card-info-wrapper {
+      .cause-card-info {
+        @extend .fz14;
+        font-family: $sintony;
+        font-weight: $regular;
+        color: $section-subtitle;
+        margin-bottom: 2.813rem;
+        @include ellipses(3);
+      }
+    }
+    .cause-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      .cause-btn {
+        @include buttons(
+          $primary,
+          $primary,
+          1.125rem,
+          $white,
+          $sintony,
+          $bold,
+          0.875rem
+        );
+      }
+    }
+  }
+}
+/*----Cause section end ------*/
+/*--Donators section start--*/
+section.donators {
+  background-color: #e9e9e9;
+  padding: 5.625rem 0;
+  .section-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.875rem;
+    .section-subtitle {
+      margin-bottom: 0.313rem;
+    }
+  }
+  .donators-wrapper {
+    padding: 3.75rem 0;
+    background-color: $white;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.42);
+    .row {
+      row-gap: 1.5rem;
+    }
+    .donator-column-wrapper {
+      padding: 0 3.125rem;
+      @media only screen and (max-width: 1199px) {
+        padding: 0 2rem;
+      }
+      .donate-now-title,
+      .featured-donators-title {
+        font-family: $rufina;
+        font-size: 1.25rem;
+        font-weight: $regular;
+        color: $dark-gray;
+        margin-bottom: 1.25rem;
+        text-align: center;
+      }
+      .donators-card-wrapper {
+        .donators-img-wrapper {
+          height: 141px;
+          overflow: hidden;
+          @media only screen and (max-width: 768px) {
+            height: auto;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .donator-info-wrapper {
+          margin-top: 1.5rem;
+          .donator-name {
+            font-family: $sintony;
+            font-size: 0.813rem;
+            font-weight: $regular;
+            color: $section-subtitle;
+            margin-bottom: 0;
+            @include ellipses(1);
+          }
+          .donated-amount {
+            @extend .sintony16;
+            font-weight: $regular;
+            color: $dark-gray;
+            margin-bottom: 0;
+            @include ellipses(1);
+            .donate {
+              color: $secondary;
+            }
+          }
+        }
+      }
+      .raised-fund-total-wrapper {
+        background-color: $secondary;
+        padding: 3.625rem 2.188rem 1.563rem;
+        margin-bottom: 1rem;
+        .barfiller {
+          margin-bottom: 0.625rem;
+          .fill {
+            background-color: $secondary-light !important;
+          }
+        }
+        .raised-fund-total-text-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          .rained-text {
+            @extend .fz14;
+            font-family: $sintony;
+            font-weight: $regular;
+            color: $white;
+            margin-bottom: 0;
+            span.rasie-amt {
+              font-family: inherit;
+              font-weight: inherit;
+              font-size: 1.5rem;
+              color: inherit;
+            }
+          }
+        }
+      }
+      .duration-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+        @media only screen and (max-width: 450px) {
+          flex-direction: column;
+          row-gap: 0.5rem;
+        }
+        .duration-info {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 0.5rem;
+          flex: 1;
+          .duration-end-text {
+            font-family: $sintony;
+            font-weight: $regular;
+            font-size: 1.125rem;
+            color: $dark-gray;
+          }
+          .duration-end-text,
+          .duration-days {
+            flex: 1;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+          }
+          .duration-days {
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #e3e3e3;
+            font-family: $sintony;
+            font-weight: $regular;
+            font-size: 0.938rem;
+            color: #131314;
+            @media only screen and (max-width: 450px) {
+              padding: 0 5px;
+            }
+            span {
+              font-size: 0.688rem;
+              text-transform: uppercase;
+              color: $section-subtitle;
+            }
+          }
+        }
+        .dontate-now-wrapper {
+          display: flex;
+          justify-content: center;
+          .donate-duration-btn {
+            @include buttons(
+              $primary,
+              $primary,
+              1.125rem,
+              $white,
+              $sintony,
+              $bold,
+              0.875rem
+            );
+          }
+        }
+      }
+    }
+  }
+}
+/*--Donators section end--*/
+/*---About section start ---*/
+section.about {
+  padding: 5.5rem 0;
+  position: relative;
+  &::after {
+    content: "";
+    height: 50%;
+    width: 100%;
+    background-color: $primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .about-container {
+    position: relative;
+    z-index: 1;
+    .about-img-wrapper {
+      height: 561px;
+      overflow: hidden;
+      padding: 0.938rem;
+      box-shadow: 0 0 10px #808080ab;
+      background-color: $white;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .col-lg-8 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 1.5rem;
+      .about-info-wrapper {
+        .about-info-title-wrapper {
+          display: flex;
+          flex-direction: column;
+          @media only screen and (max-width: 992px) {
+            .section-title {
+              color: $white;
+            }
+            .line-seprator {
+              background-color: $white;
+            }
+          }
+        }
+        .about-info {
+          @extend .fz14;
+          font-family: $sintony;
+          font-weight: $regular;
+          color: $section-subtitle;
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          @include ellipses(3);
+          @media only screen and (max-width: 992px) {
+            color: $white;
+          }
+        }
+        .about-read-more-btn {
+          @include buttons(
+            $primary,
+            $primary,
+            1.125rem,
+            $white,
+            $sintony,
+            $bold,
+            0.875rem
+          );
+          @media only screen and (max-width: 992px) {
+            @include buttons(
+              $primary,
+              $white,
+              1.125rem,
+              $white,
+              $sintony,
+              $bold,
+              0.875rem
+            );
+          }
+        }
+      }
+      .about-info-wrapper,
+      .partners-wrapper {
+        padding-left: 1.25rem;
+      }
+      .partners-wrapper {
+        .parner-title-wrapper {
+          display: flex;
+          flex-direction: column;
+          .section-title {
+            color: $white;
+          }
+          .line-seprator {
+            background-color: $white;
+          }
+        }
+        .partner-carousel {
+          width: 100%;
+          padding-right: 52px;
+          position: relative;
+          margin-top: 1.625rem;
+          .owl-carousel {
+            position: static;
+            display: flex;
+            .owl-stage-outer {
+              .item {
+                height: 101px;
+                @media only screen and (max-width: 600px) {
+                  height: 180px;
+                }
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+
+            .owl-nav {
+              flex: 0 0 42px;
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              right: 0;
+              button {
+                width: 42px;
+                height: 48px;
+                background-color: $primary-dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                  font-size: 2.25rem;
+                  color: $white;
+                }
+                &:first-child {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*---About section end ---*/
+/*- Our events section start--*/
+section.our-events {
+  padding: 5.313rem 0;
+  .our-events-info-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .row,
+  .events-row {
+    row-gap: 1.875rem;
+  }
+  .event-info-wrapper {
+    padding-bottom: 3.125rem;
+    padding-top: 2.5rem;
+    border-bottom: 1px solid #eaeaea;
+
+    .event-title-date-wrapper {
+      .event-title {
+        font-family: $rufina;
+        font-weight: $regular;
+        font-size: 1.25rem;
+        color: $dark-gray;
+      }
+      .event-date {
+        font-family: $sintony;
+        font-weight: $regular;
+        @extend .fz14;
+        color: $secondary;
+      }
+    }
+    .event-description-wrapper {
+      .event-description {
+        font-family: $sintony;
+        font-weight: $regular;
+        @extend .fz14;
+        color: $section-subtitle;
+        margin-bottom: 0;
+        @include ellipses(2);
+      }
+    }
+  }
+  .full-events-wrapper {
+    .full-events-btn {
+      @include buttons(
+        $primary,
+        $primary,
+        1.125rem,
+        $white,
+        $sintony,
+        $bold,
+        0.875rem
+      );
+    }
+  }
+  .event-heading-banner {
+    background-color: $secondary;
+    padding: 2.125rem 4rem 2.5rem;
+    position: relative;
+    .event-banner-heading {
+      text-align: center;
+      color: #e1fff1;
+      font-family: $rufina;
+      font-weight: $regular;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .event-banner-description {
+      font-family: $sintony;
+      font-weight: $regular;
+      text-align: center;
+      @extend .fz14;
+      color: #e1fff1;
+      margin-bottom: 0;
+    }
+  }
+  .event-img-wrapper-caption {
+    position: relative;
+    height: 162px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      font-size: 1.25rem;
+      color: $white;
+      font-family: $rufina;
+      font-weight: $regular;
+      padding-left: 1.25rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+  .event-sticket-wrapper {
+    background-color: $primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0px 7px 3px;
+    p {
+      font-family: $rufina;
+      font-size: 2.813rem;
+      color: $white;
+      font-weight: $regular;
+      margin-bottom: 0;
+      line-height: normal;
+      @include ellipses(2);
+    }
+    .sticker-date {
+      font-family: $rufina;
+      font-size: 0.938rem;
+      color: $white;
+      font-weight: $regular;
+    }
+  }
+}
+/*- Our events section end--*/

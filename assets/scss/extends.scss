@@ -1,0 +1,64 @@
+.rufina16 {
+  font-family: $rufina;
+  font-size: 1rem;
+}
+.sintony16 {
+  font-family: $sintony;
+  font-size: 1rem;
+}
+.fz14 {
+  font-size: 0.875rem;
+}
+.section-title {
+  font-family: $rufina;
+  font-weight: $regular;
+  font-size: 1.875rem;
+  color: $section-title;
+}
+.section-subtitle {
+  @extend .fz14;
+  font-family: $sintony;
+  color: $section-subtitle;
+  font-weight: $regular;
+  margin-bottom: 0.75rem;
+}
+.line-seprator {
+  width: 22px;
+  height: 2px;
+  background-color: $secondary;
+}
+// progress bar
+.progressbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+// .circle div {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin: -20px 0 0 -86px;
+//   width: 100%;
+//   text-align: center;
+//   line-height: 40px;
+//   font-size: 31px;
+// }
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+.circle span {
+  display: block;
+  color: white;
+  margin-top: 12px;
+}

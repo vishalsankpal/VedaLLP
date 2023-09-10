@@ -1,0 +1,179 @@
+section.donate-banner {
+  min-height: 300px;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(25, 55, 98, 0.43),
+      rgba(82, 150, 250, 0.54)
+    ),
+    url(../../assets/images/Donate.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .banner-content {
+    .banner-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      .banner-title {
+        margin-bottom: 0;
+        font-family: $rufina;
+        font-size: 3rem;
+        font-weight: $regular;
+        color: $white;
+      }
+    }
+    .banner-img-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}
+/*-- donate form section start--*/
+section.donate-form {
+  padding: 5.625rem 0;
+  .section-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.188rem;
+  }
+  .donate-amount-form-wrapper {
+    background-color: $secondary;
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+    position: relative;
+    .or {
+      background-color: #6db995;
+      color: #fff;
+      display: inline-flex;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .row {
+      row-gap: 4.375rem;
+    }
+    .choose-amout-wrapper {
+      padding: 0 2.063rem;
+      .choose-amout-heading {
+        font-family: $rufina;
+        font-size: 1.25rem;
+        color: $white;
+        font-weight: $bold;
+        margin-bottom: 0.938rem;
+      }
+      .choose-amount-selection-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+        .choose-amount-radio-wrapper {
+          min-height: 90px;
+          border: 1px solid #8dd6b3;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex: 1;
+          align-items: center;
+          input[type="radio"] {
+            height: 20px;
+            width: 20px;
+            margin-bottom: 0.5rem;
+          }
+          label {
+            font-family: $sintony;
+            font-size: 0.938rem;
+            color: $white;
+            font-weight: $regular;
+          }
+        }
+      }
+      input[type="text"] {
+        min-height: 90px;
+        width: 100%;
+        background-color: $secondary;
+        border: 1px solid #8dd6b3;
+        padding-left: 1rem;
+        color: #b6f5d7;
+        font-size: 0.875rem;
+        font-family: $sintony;
+        font-weight: $regular;
+        &::placeholder {
+          color: #b6f5d7;
+          font-size: 0.875rem;
+          font-family: $sintony;
+          font-weight: $regular;
+        }
+      }
+    }
+  }
+  .donator-details-form-wrapper {
+    padding-top: 5.625rem;
+    .donar-info-row {
+      row-gap: 1.5rem;
+      .donar-info-fields {
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        padding-left: 1.25rem;
+        font-family: $sintony;
+        font-weight: $regular;
+        @extend .fz14;
+        color: #3b3b3b;
+        min-height: 50px;
+        &::placeholder {
+          font-family: $sintony;
+          font-weight: $regular;
+          text-transform: uppercase;
+          @extend .fz14;
+          color: #3b3b3b;
+        }
+      }
+      textarea,
+      select {
+        width: 100%;
+        min-height: 50px;
+        border: 1px solid #e2e2e2;
+        padding-left: 1.25rem;
+        &::placeholder {
+          text-transform: uppercase;
+          font-family: $sintony;
+          font-weight: $regular;
+          text-transform: uppercase;
+          @extend .fz14;
+          color: #3b3b3b;
+        }
+      }
+      textarea {
+        min-height: 140px;
+      }
+      .btnWrapper {
+        display: flex;
+        justify-content: center;
+        button.submitForm {
+          @include buttons(
+            $primary,
+            $primary,
+            1.125rem,
+            $white,
+            $sintony,
+            $bold,
+            0.875rem
+          );
+        }
+      }
+    }
+  }
+}
+/*-- donate form section end--*/

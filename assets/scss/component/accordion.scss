@@ -1,0 +1,11 @@
+.notification {
+  position: fixed;
+  bottom: 30px;
+  background: #2fb22f;
+  padding: 15px;
+  transition: ease 0.4s all;
+  p {
+    margin-bottom: 0;
+    color: $white;
+  }
+}

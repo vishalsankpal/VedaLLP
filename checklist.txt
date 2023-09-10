@@ -1,0 +1,23 @@
+Targets checklist
+1. Mobile responsive :Done
+2. Basic accessibility :Done
+3. Basic SEO :Done
+4. Lazy loading :Done
+5. Optimization(CSS, JS, Images) :Done
+6. Multi-lavel navigation :Done
+7. Mega menu :Done
+8. Naming conventions :Done
+9. Moduler code. : Done
+10. Code testing. :Done
+11. Cross-browser testing. :Done
+12. W3C Standard code. : Done
+13. backward compatability. :Done
+14. Form submission response(API Call). Done
+15. DRY principle(css, js). : Done
+16. Form submission notification. Done
+17. progressbar with tooltip. :Done
+18. Carousel. :Done
+19. Smooth Scrolling.  Done
+20. Basic custom popups. Not Implemented
+21. Autoprifixing: Implemented using gulp.
+22. Automation for the SCSS, JS and Browser sync: Implemented Using gulp.

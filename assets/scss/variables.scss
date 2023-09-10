@@ -1,0 +1,55 @@
+/* Colors : Starts; */
+$content-color: #333333;
+$primary: #677dd7;
+$primary-dark: #4e62bb;
+// $primary-light:    #dbdde3;
+$primary-light: #8195ed;
+$secondary: #7bc5a1;
+$secondary-light: #9be9bf;
+$mid-dark-grey: #50534f;
+$white: #fff;
+$black: #000;
+
+// text color
+$grey-light: #505050;
+$dark-gray: #262626;
+$section-title: #131314;
+$section-subtitle: #6f7a7f;
+$grey-extra-light: #ebebeb;
+$grey-text: #797b7a;
+$light-border: #eaeaea;
+$footer-section: #515350;
+// screen sizes
+$screen-xl: 1440;
+$screen-l: 1200;
+$screen-m: 992px;
+$screen-xm: 768;
+// $screen-sm:556;
+// $screen-xsm:475;
+
+// font family
+$rufina: "Rufina", serif;
+$sintony: "Sintony", sans-serif;
+// font-weight
+$regular: 400;
+$bold: 700;
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
+  color: $black;
+  font-family: "Sintony", sans-serif;
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 1.5;
+  margin: 0;
+}
