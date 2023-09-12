@@ -11,7 +11,7 @@ const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass")(require("sass"));
 const livereload = require("gulp-livereload");
-const notify = require("gulp-notify");
+// const notify = require("gulp-notify");
 const reload = browsersync.reload;
 
 // == Browser-sync task
@@ -32,20 +32,22 @@ gulp.task("browser-sync", function (done) {
 
 // CSS task
 gulp.task("css", () => {
-  return gulp
-    .src(["assets/scss/app.scss"])
-    .pipe(plumber())
-    .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("public/css"))
-    .pipe(
-      notify({
-        message: "main SCSS processed",
-      })
-    )
-    .pipe(browsersync.stream())
-    .pipe(livereload());
+  return (
+    gulp
+      .src(["assets/scss/app.scss"])
+      .pipe(plumber())
+      .pipe(sass({ outputStyle: "expanded" }))
+      .pipe(rename({ suffix: ".min" }))
+      .pipe(postcss([autoprefixer(), cssnano()]))
+      .pipe(gulp.dest("public/css"))
+      // .pipe(
+      //   notify({
+      //     message: "main SCSS processed",
+      //   })
+      // )
+      .pipe(browsersync.stream())
+      .pipe(livereload())
+  );
 });
 
 // Webfonts task
@@ -90,4 +92,4 @@ gulp.task(
     );
   })
 );
-exports.build = gulp.series("css", "js", "webfonts", "browser-sync");
+exports.build = gulp.series("css", "js", "webfonts");
