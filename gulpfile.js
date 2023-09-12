@@ -90,3 +90,4 @@ gulp.task(
     );
   })
 );
+exports.build = gulp.series("css", "js", "webfonts", "browser-sync");
